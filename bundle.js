@@ -60,7 +60,9 @@ var Vingador = /*#__PURE__*/function (_Pessoa) {
 }(Pessoa);
 
 var thor = new Vingador("Thor", "1.85", "100kg", ["Deus do Trovão", "Super força", "Vôo", "Longevidade"], true, true, false);
+var ironman = new Vingador("Tony Stark", "1.80", "85kg", ["Armadura Mark 86", "Vôo"], true, true, false);
 
 document.getElementById("lutar").onclick = function () {
   thor.lutar();
+  ironman.lutar();
 };

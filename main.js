@@ -40,6 +40,17 @@ const thor = new Vingador(
   false
 );
 
+const ironman = new Vingador(
+  "Tony Stark",
+  "1.80",
+  "85kg",
+  ["Armadura Mark 86", "Vôo"],
+  true,
+  true,
+  false
+);
+
 document.getElementById("lutar").onclick = function () {
   thor.lutar();
+  ironman.lutar();
 };
