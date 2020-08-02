@@ -1,56 +1,42 @@
-class Pessoa {
-  constructor(nome, altura, peso) {
-    this.nome = nome;
-    this.altura = altura;
-    this.peso = peso;
-  }
-}
+const arr = [1, 2, 3, 4, 5, 6];
+const cesta = ["banana", "maçã", "abacate", "abacaxi"];
 
-class Vingador extends Pessoa {
-  constructor(
-    nome,
-    altura,
-    peso,
-    poderes,
-    temArmadura,
-    temArma,
-    isMembroFundador,
-    isImortal
-  ) {
-    super(nome, altura, peso);
-    this.poderes = poderes;
-    this.temArmadura = temArmadura;
-    this.temArma = temArma;
-    this.isMembroFundador = isMembroFundador;
-    this.isImortal = isImortal;
-  }
+const squareArr = arr.map(function (item, index) {
+  return item * item;
+})
 
-  lutar() {
-    alert(`${this.nome} está lutando usando ${this.poderes[1]}`);
-  }
-}
+const fruitPosition = cesta.map(function (item, index) {
+  return `A/O ${item} está na posição ${index} do array`;
+});
 
-const thor = new Vingador(
-  "Thor",
-  "1.85",
-  "100kg",
-  ["Deus do Trovão", "Super força", "Vôo", "Longevidade"],
-  true,
-  true,
-  false
-);
+//console.log(squareArr);
+//console.log(fruitPosition);
 
-const ironman = new Vingador(
-  "Tony Stark",
-  "1.80",
-  "85kg",
-  ["Armadura Mark 86", "Vôo"],
-  true,
-  true,
-  false
-);
+const sum = arr.reduce(function (total, next) {
+  //console.log("total ", total);
+  //console.log("next ", next);
+  return total + next;
+});
 
-document.getElementById("lutar").onclick = function () {
-  thor.lutar();
-  ironman.lutar();
-};
+//console.log(sum);
+
+const filter = arr.filter(function (item) {
+  return item % 2 === 0;
+});
+
+const filter2 = cesta.filter(function (item) {
+  return item === "banana";
+});
+
+//console.log(filter);
+//console.log(filter2);
+
+const find = arr.find(function (item) {
+  return item === 3;
+});
+const find2 = cesta.find(function (item) {
+  return item === "maçã";
+});
+
+console.log(find);
+console.log(find2);
